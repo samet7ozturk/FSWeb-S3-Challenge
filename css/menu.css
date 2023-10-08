@@ -3,150 +3,626 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    max-width: 1920px;
-    min-width: 428px;
-    font-size: 62.5%;
+  max-width: 1920px;
+  min-width: 428px;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, i {
-    text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+i {
+  text-decoration: none;
 }
 
 h1 {
-    font-size: 7.5rem;
+  font-size: 7.5rem;
+  color: white;
+  text-align: center;
 }
 
 h2 {
-    font-size: 6rem;
+  font-size: 6rem;
+  color: white;
+  text-align: center;
+  padding: 10rem 0 0;
 }
 
 h3 {
-    font-size: 5rem;
+  font-size: 5rem;
+  color: white;
 }
 
 h4 {
-    font-size: 4rem;
+  font-size: 4rem;
+  color: white;
 }
 
-p, a {
-    font-size: 3rem;
+p,
+a {
+  font-size: 3rem;
+  color: white;
 }
 
 /* header section */
 header {
-    width: 100%;
-    height: 100vh;
-    background-image: url('../img/menu-header.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/menu-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  background-color: black;
+  opacity: 50%;
+}
+
+nav {
+  text-align: center;
+  background-color: black;
+  opacity: 50%;
+}
+
+header nav a {
+  color: white;
+}
+
+header .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18rem;
+}
+
+.socialmedia {
+  opacity: 50%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 /* spacer */
 .spacer {
-    width: 100%;
-    height: 20vh;
-    background-color: rgb(0, 4, 17);
+  width: 100%;
+  height: 20vh;
+  background-color: rgb(0, 4, 17);
 }
 .spacer-sm {
-    width: 100%;
-    height: 10vh;
-    background-color: rgb(0, 4, 17);
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(0, 4, 17);
 }
 
 /* menu */
 
 .menu {
-    width: 100%;
-    height: auto;
-    background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  background-image: url("../img/staff-bartender.jpg");
+  background-color: rgb(0, 4, 17);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu-Section {
+  background-color: rgb(0, 4, 17, 0.7);
+}
+
+.menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sira1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 5rem 0;
+}
+
+.sira2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5rem 0 10rem;
+}
+
+.yiyecek {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.aciklama {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.menu-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 500px;
 }
 
 /* footer section */
 footer {
+  width: 100%;
+  height: 15vh;
+  padding-top: 2.5vh;
+  font-size: 3rem;
+  background-color: rgb(0, 4, 17);
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+footer nav {
+  background-color: rgb(0, 4, 17);
+  opacity: 100%;
+  display: flex;
+  gap: 8rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mail {
+  display: flex;
+}
+
+footer nav a {
+  color: white;
+}
+
+footer .mail {
+  color: white;
+}
+
+footer .footer1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.footer-kayit {
+  background-color: rgb(0, 4, 17);
+}
+
+footer .footer-kayit input {
+  padding: 1rem 20rem;
+  margin-left: 1rem;
+  font-size: large;
+}
+
+footer .footer-kayit button {
+  padding: 1rem 5rem;
+  font-size: large;
+  font-weight: bold;
+}
+
+.copyright {
+  color: white;
+  text-align: end;
+  font-size: medium;
+  background-color: rgb(0, 4, 17);
+}
+
+/* tablet media query */
+@media (min-width: 428px) and (max-width: 1024px) {
+  /* header section */
+  header .navbar {
+    gap: 30px;
+  }
+
+  /* gallery section */
+  .gallery {
+    height: auto;
+  }
+
+  .Icecekler {
+    padding-bottom: 6rem;
+  }
+
+  .CorbalarVeSalatalar {
+    padding-bottom: 6rem;
+  }
+
+  /* about us section */
+
+  .about {
+    height: 200vh;
+  }
+
+  .about h2 {
     width: 100%;
-    height: 15vh;
+    padding-top: 5vh;
+  }
+
+  .about-container .text {
+    width: 85%;
+  }
+
+  /* contact us section */
+  .contact h3 {
     padding-top: 2.5vh;
-    font-size: 3rem;
+  }
+
+  .info {
+    flex-wrap: wrap;
+  }
+
+  .address {
+    width: 100%;
+    padding-bottom: 2.5vh;
+  }
+
+  .hours {
+    width: 100%;
+  }
+
+  .contacts {
+    width: 100%;
+    padding-bottom: 2.5vh;
+  }
+
+  /* footer section */
+  footer {
+    height: auto;
+    padding-top: 2.5vh;
+    font-size: 2rem;
+  }
+
+  .mail {
+    padding: 2rem 0 6rem;
+    justify-content: center;
+  }
+
+  footer nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  footer .footer-kayit {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  footer .footer-kayit input {
+    padding: 0;
+  }
+
+  .copyright {
+    text-align: center;
+  }
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
-    /* header section */
-    .header-title {
-        width: 75%;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 4rem;
-    }
+  /* header section */
+  h1 {
+    font-size: 4rem;
+  }
 
-    /* menu */
-    .menu {
-        background-image: none;
-    }
+  header .navbar {
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 2rem;
+  }
 
-    /* footer section */
-    footer {
-        height: auto;
-        padding-top: 2.5vh;
-        font-size: 2rem;
-    }
+  .socialmedia {
+    padding: 2rem 0 2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    padding: 3rem 0 0;
+    color: black;
+    border-bottom: 7px solid;
+  }
+
+  h3 {
+    font-size: 3rem;
+    border: 2px solid;
+    text-align: center;
+    width: 20rem;
+    margin: 3rem 0 3rem 15rem;
+    color: black;
+  }
+
+  h4 {
+    text-align: center;
+    color: black;
+  }
+
+  p {
+    text-align: center;
+    color: black;
+  }
+
+  a {
+    font-size: 2rem;
+  }
+
+  .menu {
+    background-image: none;
+  }
+
+  .menu-Section {
+    background-color: rgb(225, 239, 230);
+  }
+
+  .sira1 {
+    padding: 0;
+  }
+
+  .Icecekler {
+    padding: 3rem 0;
+  }
+
+  .Aperatifler {
+    padding: 3rem 0;
+  }
+
+  .CorbalarVeSalatalar {
+    padding: 3rem 0;
+  }
+
+  .Mezeler {
+    padding: 3rem 0;
+  }
+
+  .Tatlilar {
+    padding: 3rem 0;
+  }
+
+  .yiyecek {
+    flex-direction: column;
+    justify-content: center;
+    border-top: 2px solid;
+  }
+
+  .aciklama {
+    justify-content: center;
+  }
+
+  /* gallery section */
+  .gallery {
+    height: auto;
+  }
+
+  /* about us section */
+
+  .about {
+    height: 200vh;
+  }
+
+  .about h2 {
+    width: 100%;
+    padding-top: 5vh;
+  }
+
+  .about-container .text {
+    width: 85%;
+  }
+
+  /* contact us section */
+  .contact h3 {
+    padding-top: 2.5vh;
+  }
+
+  .info {
+    flex-wrap: wrap;
+  }
+
+  .address {
+    width: 100%;
+    padding-bottom: 2.5vh;
+  }
+
+  .hours {
+    width: 100%;
+  }
+
+  .contacts {
+    width: 100%;
+    padding-bottom: 2.5vh;
+  }
+
+  /* footer section */
+  footer {
+    height: auto;
+    padding-top: 2.5vh;
+    font-size: 2rem;
+  }
+
+  footer nav {
+    flex-direction: column;
+  }
+
+  .mail {
+    padding: 2rem 0 8rem;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  footer .footer-kayit {
+    justify-content: space-evenly;
+    padding: 2rem 0;
+  }
+
+  footer .footer-kayit input {
+    font-size: large;
+    padding: 0;
+  }
+
+  footer .footer-kayit button {
+    padding: 0rem 5rem;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 0;
+  }
 }
